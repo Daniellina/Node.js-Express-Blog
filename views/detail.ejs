@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>详情页</title>
+    <!--引用时，变量用<%= %>,ejs文件用<%- include %>-->
+    <%- include header %>
+  </head>
+  <body>
+    <%- include('bar',{username: username}) %>
+    <div class="detail">
+        <div class="title"><%=item.title%></div>
+        <div class="desc">
+            <span>作者：<%=item.username%></span>
+            <span>发布时间：<%=item.time%></span>
+        </div>
+        <div class="content"><%-item.content%></div>
+    </div>
+  </body>
+</html>
